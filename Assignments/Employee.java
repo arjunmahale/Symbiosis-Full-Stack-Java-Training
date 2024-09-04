@@ -1,36 +1,74 @@
-package Java;
+package polymorphism;
+
+import java.util.Scanner;
 
 public class Employee {
-	int empid;String empname,empaddress;
-	public Employee(int empid,String empname,String empaddress)
+
+	String name ;
+	int salary;
+	int ch;
+	public void payment()
 	{
-		this.empid=empid;
-		this.empname=empname;
-		this.empaddress=empaddress;
+		System.out.println("enter your choice : \n1.without args \n2.with name \n3.with name and salary \n4.with salary and name ");
+		Scanner sc=new Scanner(System.in);
+		ch=sc.nextInt();
+		switch(ch)
+		{
+		case 1:cal();break;
+		case 2:
+			System.out.println("enter name");
+			name=sc.next();
+			cal(name);break;
+		case 3:
+			System.out.println("enter name ");
+			name=sc.next();
+			System.out.println("enter salary ");
+			salary=sc.nextInt();
+			
+			cal(name,salary);break;
+			
+		case 4:
+			
+		System.out.println("enter salary ");
+		salary=sc.nextInt();
+		System.out.println("enter name ");
+		name=sc.next();
+		
+		cal(salary,name);
+		break;
+		}
 	}
-	public void show()
+	public void cal() {
+		System.out.println("with no args");
+	}
+	public void cal(String name)
 	{
-		System.out.println("--------Employee details--------");
-		System.out.println("employee id ="+empid);
-		System.out.println("employee name  ="+empname);
-		System.out.println("employee address ="+empaddress);
-	}
-
-
-	public static void main(String[] args) {
-		Employee[] emplist=new Employee[5];
 		
-		emplist[0]=new Employee(12,"ram","india");
-		emplist[0].show();
-		emplist[1]=new Employee(13,"sham","dubai");
-		emplist[1].show();
-		emplist[2]=new Employee(14,"shubham","pune");
-		emplist[2].show();
-		emplist[3]=new Employee(15,"omkar","nashik");
-		emplist[3].show();
-		emplist[4]=new Employee(16,"ajay","mumbai");
-		emplist[4].show();
-		
+		this.name=name;
+		System.out.println("employee name : "+name);
 	}
+	public void cal(int salary,String name)
+	{
+		this.salary=salary;
+		this.name=name;
+		System.out.println( "salary is : "+salary+"name is :"+name);
+	}
+	public void cal(String name,int salary)
+	{
+		this.salary=salary;
+		this.name=name;
+		System.out.println("employee name : "+name+", salary is : "+salary);
+	} 
+public static void main(String[] args) {
+		Employee e2=new Employee();
+		e2.payment();
 
+		
+		
+		
+		
+		
+		
+
+	}
 }
