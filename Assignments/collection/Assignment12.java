@@ -37,7 +37,8 @@ public class Assignment12 {
 							System.out.println("enter the "+n+" elements :");
 							for(int i=0;i<n;i++)
 							{
-								ll.add(sc.nextInt());
+								int num=sc.nextInt();
+								ll.add(num);
 							}
 							break;
 					case 2: 
