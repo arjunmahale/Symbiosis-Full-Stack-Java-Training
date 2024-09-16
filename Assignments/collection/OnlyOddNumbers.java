@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.ListIterator;
 import java.util.Scanner;
 
-public class Assignment2 {
+public class OnlyOddNumbers {
 
 	public static void main(String[] args) {
 		ArrayList<Integer> al=new ArrayList<Integer>();
