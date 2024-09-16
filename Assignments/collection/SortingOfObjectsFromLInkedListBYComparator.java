@@ -41,7 +41,7 @@ class nameComparator implements Comparator<Student11>{
 	
 }
 	
-public class Student1{
+public class SortingOfObjectsFromLInkedListBYComparator{
 	public static void main(String[] args) {
 		
 				
