@@ -3,7 +3,7 @@ package Collection;
 import java.util.LinkedList;
 import java.util.Scanner;
 
-public class Assignment12 {
+public class LinkedLIstStackVectorOps {
 
 	
 	public static void main(String[] args) {
