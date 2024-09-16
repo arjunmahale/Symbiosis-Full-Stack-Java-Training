@@ -25,7 +25,7 @@ class author
 		
 	}	
 }
-public class Assignment {
+public class BookHasAuthor {
 
 	public static void main(String[] args) {
 	  author d1=new author();
