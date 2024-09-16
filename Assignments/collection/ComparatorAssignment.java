@@ -60,7 +60,7 @@ class locationComparator implements Comparator<Employee>{
 	
 }
 	
-public class Employee1{
+public class ComparatorAssignment{
 	public static void main(String[] args) {
 		
 				
