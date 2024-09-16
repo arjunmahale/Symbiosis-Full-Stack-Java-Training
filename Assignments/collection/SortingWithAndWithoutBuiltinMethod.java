@@ -2,7 +2,7 @@ package Collection;
 
 import java.util.*;
 
-public class sort {
+public class SortingWithAndWithoutBuiltinMethod {
 	 public static void m1() {
 		int n;
 		Scanner sc =new Scanner(System.in);
