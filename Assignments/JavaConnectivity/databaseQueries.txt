@@ -1,0 +1,92 @@
+
+mysql> create database studentDB;
+ERROR 1007 (HY000): Can't create database 'studentdb'; database exists
+mysql> use studentDB;
+Database changed
+mysql> create table student(id int not null primary key,name varchar(20),subject varchar(20),average int,division varchar(10));
+Query OK, 0 rows affected (0.10 sec)
+
+mysql> insert into table values(1,'Arjun','physics',75,'A');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'table values(1,'Arjun','physics',75,'A')' at line 1
+mysql> insert into student values(1,'Arjun','physics',75,'A');
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into student values(2,'vaibhav','chemistry',60,'B');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into student values(3,'ajay','chemistry',50,'C');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into student values(4,'mahesh','physics',50,'C');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into student values(5,'omkar','biology',90,'A');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into student values(6,'kiran','biology',90,'A');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into student values(7,'farhan','physics',78,'B');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into student values(8,'amar','math',60,'C');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into student values(9,'aakash','chemistry',85,'B');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into student values(10,'samir','math',90,'A');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select name,subject from student;
++---------+-----------+
+| name    | subject   |
++---------+-----------+
+| Arjun   | physics   |
+| vaibhav | chemistry |
+| ajay    | chemistry |
+| mahesh  | physics   |
+| omkar   | biology   |
+| kiran   | biology   |
+| farhan  | physics   |
+| amar    | math      |
+| aakash  | chemistry |
+| samir   | math      |
++---------+-----------+
+10 rows in set (0.00 sec)
+
+mysql> select * from student where subject in('physics','chemistry');
++----+---------+-----------+---------+----------+
+| id | name    | subject   | average | division |
++----+---------+-----------+---------+----------+
+|  1 | Arjun   | physics   |      75 | A        |
+|  2 | vaibhav | chemistry |      60 | B        |
+|  3 | ajay    | chemistry |      50 | C        |
+|  4 | mahesh  | physics   |      50 | C        |
+|  7 | farhan  | physics   |      78 | B        |
+|  9 | aakash  | chemistry |      85 | B        |
++----+---------+-----------+---------+----------+
+6 rows in set (0.00 sec)
+
+mysql> select * from student where average between 70 and 100;
++----+--------+-----------+---------+----------+
+| id | name   | subject   | average | division |
++----+--------+-----------+---------+----------+
+|  1 | Arjun  | physics   |      75 | A        |
+|  5 | omkar  | biology   |      90 | A        |
+|  6 | kiran  | biology   |      90 | A        |
+|  7 | farhan | physics   |      78 | B        |
+|  9 | aakash | chemistry |      85 | B        |
+| 10 | samir  | math      |      90 | A        |
++----+--------+-----------+---------+----------+
+6 rows in set (0.00 sec)
+
+mysql> select * from student where name like 'a%n';
++----+-------+---------+---------+----------+
+| id | name  | subject | average | division |
++----+-------+---------+---------+----------+
+|  1 | Arjun | physics |      75 | A        |
++----+-------+---------+---------+----------+
+1 row in set (0.00 sec)
+
+mysql>
