@@ -6,8 +6,7 @@ Database changed
 mysql> create table student(id int not null primary key,name varchar(20),subject varchar(20),average int,division varchar(10));
 Query OK, 0 rows affected (0.10 sec)
 
-mysql> insert into table values(1,'Arjun','physics',75,'A');
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'table values(1,'Arjun','physics',75,'A')' at line 1
+
 mysql> insert into student values(1,'Arjun','physics',75,'A');
 Query OK, 1 row affected (0.03 sec)
 
