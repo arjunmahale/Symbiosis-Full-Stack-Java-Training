@@ -1,0 +1,18 @@
+create table visitor(id int not null primary key,name varchar(20),gender varchar(10),location varchar(20),amount_paid int);
+drop table visitors;
+insert into visitor values(1,'Arjun','male','nashik',5000);
+insert into visitor values(9,'manya','female','nashik',4000);
+insert into visitor values(3,'ajay','male','pune',4000);
+insert into visitor values(4,'gauri','female','mumbai',2000);
+insert into visitor values(5,'jay','male','pune',3000);
+insert into visitor values(8,'vaibhav','male','nashik',null);
+select * from visitor where location ='nashik' and gender='female' and amount_paid>3000;
+select distinct(location) from visitor;
+select * from visitor order by amount_paid desc;
+
+update visitor set amount_paid = amount_paid + (amount_paid * 10/100) where id=4;
+select * from visitor;
+select sum(amount_paid) from visitor;
+select sum(amount_paid) from visitor where location in('nashik');
+select count(*) from visitor where amount_paid is null;
+select * from visitor;
